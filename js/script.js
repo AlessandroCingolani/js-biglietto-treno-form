@@ -5,6 +5,8 @@
 4. Faccio calcolo del prezzo
 5. Genero random carrozza 
 6. printo nell html i valori ottenuti
+7. condizionale per vari sconti e print 
+8. fixed il prezzo finale
  */
 const priceForKm = 0.21;
 const underDiscount = 20;
@@ -28,8 +30,12 @@ btnGener.addEventListener('click',function(){
 
   if(discountOpz === 'Minorenne'){
     price *= 1 - (underDiscount / 100);
+    document.querySelector('.discount').innerHTML = 'Sconto ' + discountOpz;
   }else if (discountOpz === 'Over65'){
     price *= 1 - (overDiscount / 100);
+    document.querySelector('.discount').innerHTML = 'Sconto ' + discountOpz;
+  }else{
+    document.querySelector('.discount').innerHTML = 'Biglietto Standard';
   }
 
 
@@ -38,7 +44,6 @@ btnGener.addEventListener('click',function(){
   document.querySelector('.costo').innerHTML ='€'
   + price.toFixed(2);
 
-  document.querySelector('.discount').innerHTML = discountOpz;
 
   document.querySelector('.wagon').innerHTML = wagon;
 
