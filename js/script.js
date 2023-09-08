@@ -27,7 +27,7 @@ const displayBlock = document.querySelector('.generated-block');
 btnGener.addEventListener('click',function(){
 
   if(!isNaN(name.value)){
-    
+    console.log('Error put string value!');
    }else {
      displayBlock.classList.remove('d-none');
      const traveler = name.value;
