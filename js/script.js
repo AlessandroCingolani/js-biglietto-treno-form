@@ -6,7 +6,7 @@
 5. Genero random carrozza 
 6. printo nell html i valori ottenuti
 7. condizionale per vari sconti e print 
-8. aggiungo bottone per svuotare tutta la pagina
+8. aggiungo bottone per svuotare dati form
 9. fixed il prezzo finale
  */
 const priceForKm = 0.21;
@@ -55,5 +55,8 @@ btnGener.addEventListener('click',function(){
 
 
 btnCancel.addEventListener('click',function(){
- 
+  displayBlock.classList.add('d-none');
+  document.getElementById('km').value ='';
+  document.getElementById('name').value ='';
+  document.getElementById('age').value ='Minorenne';
 });
