@@ -56,7 +56,7 @@ btnGener.addEventListener('click',function(){
 
 btnCancel.addEventListener('click',function(){
   displayBlock.classList.add('d-none');
-  document.getElementById('km').value ='';
-  document.getElementById('name').value ='';
-  document.getElementById('age').value ='Minorenne';
+  km.value ='';
+  name.value ='';
+  age.value ='Minorenne';
 });
