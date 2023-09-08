@@ -24,26 +24,31 @@
       </div>
       <div class="col">
         <select class="form-select form-select-sm" aria-label="Small select example">
-          <option value="1">Minorenne</option>
-          <option value="2">Maggiorenne</option>
-          <option value="3">Over 65</option>
+          <option id="minorenne" value="1">Minorenne</option>
+          <option id="maggiorenne" value="2">Maggiorenne</option>
+          <option id="over65" value="3">Over 65</option>
         </select>
       </div>
       <div class="block-btn">
         <button id="btn-gener" class="btn ">Genera</button>
-        <button class="btn">Annulla</button>
+        <button class="btn" type="reset" >Annulla</button>
       </div>
     </div>
-    <div class="generated-block d-none ">
+    <div class="generated-block d-none">
       <h1>IL TUO BIGLIETTO</h1>
       <div class="card">
         <h5>DETTAGLIO PASSEGGERI</h5>
         <div class="row">
-          <div class="col-3">shadow </div>
+          <div id="traveler" class="col-3">
+            Nome passegero
+            <div class="saluto"></div>
+          </div>
           <div class="col-2">Offerta</div>
           <div class="col-2">Carrozza</div>
           <div class="col-2">Codice CP</div>
-          <div class="col-2">Costo Biglietto</div>
+          <div class="col-2 ">Costo Biglietto
+            <div class="costo">€</div>
+          </div>
         </div>
     </div>
     </div>
