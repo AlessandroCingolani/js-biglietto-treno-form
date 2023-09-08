@@ -15,11 +15,14 @@ btnGener.addEventListener('click',function(){
   displayBlock.classList.remove('d-none')
   const traveler = name.value;
   const distance = km.value;
-  const age2 = age.value;
+  const discountOpz = age.value;
   const price = distance * priceForKm;
+  const wagon = (Math.floor(Math.random()*9)+1)
   document.querySelector('.saluto').innerHTML = traveler;
   document.querySelector('.costo').innerHTML ='€'
   + price;
 
-  document.querySelector('.discount').innerHTML = age2;
+  document.querySelector('.discount').innerHTML = discountOpz;
+
+  document.querySelector('.wagon').innerHTML = wagon;
 });
