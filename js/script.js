@@ -29,9 +29,9 @@ btnGener.addEventListener('click',function(){
 
 
   document.querySelector('.saluto').innerHTML = traveler;
-  
+
   document.querySelector('.costo').innerHTML ='€'
-  + price;
+  + price.toFixed(2);
 
   document.querySelector('.discount').innerHTML = discountOpz;
 
