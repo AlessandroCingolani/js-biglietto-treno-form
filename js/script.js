@@ -6,7 +6,8 @@
 5. Genero random carrozza 
 6. printo nell html i valori ottenuti
 7. condizionale per vari sconti e print 
-8. fixed il prezzo finale
+8. aggiungo bottone per svuotare tutta la pagina
+9. fixed il prezzo finale
  */
 const priceForKm = 0.21;
 const underDiscount = 20;
@@ -17,10 +18,12 @@ const name = document.getElementById('name');
 const km = document.getElementById('km');
 const age = document.getElementById('age');
 const btnGener = document.getElementById('btn-gener');
+const btnCancel = document.getElementById('cancel');
 const displayBlock = document.querySelector('.generated-block');
 
+// btn for stamp ticket
 btnGener.addEventListener('click',function(){
-  displayBlock.classList.remove('d-none')
+  displayBlock.classList.remove('d-none');
   const traveler = name.value;
   const distance = km.value;
   const discountOpz = age.value;
@@ -48,4 +51,9 @@ btnGener.addEventListener('click',function(){
   document.querySelector('.wagon').innerHTML = wagon;
 
   document.querySelector('.cp').innerHTML = cp;
+});
+
+
+btnCancel.addEventListener('click',function(){
+ 
 });
