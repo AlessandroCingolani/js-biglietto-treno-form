@@ -21,37 +21,45 @@ const btnGener = document.getElementById('btn-gener');
 const btnCancel = document.getElementById('cancel');
 const displayBlock = document.querySelector('.generated-block');
 
+
+
 // btn for stamp ticket
 btnGener.addEventListener('click',function(){
-  displayBlock.classList.remove('d-none');
-  const traveler = name.value;
-  const distance = km.value;
-  const discountOpz = age.value;
-  let price = distance * priceForKm;
-  const wagon = (Math.floor(Math.random()*9)+1);
-  const cp = Math.floor(Math.random()* (maxCp - minCp +1) + minCp);
 
-  if(discountOpz === 'Minorenne'){
-    price *= 1 - (underDiscount / 100);
-    document.querySelector('.discount').innerHTML = 'Sconto ' + discountOpz;
-  }else if (discountOpz === 'Over65'){
-    price *= 1 - (overDiscount / 100);
-    document.querySelector('.discount').innerHTML = 'Sconto ' + discountOpz;
-  }else{
-    document.querySelector('.discount').innerHTML = 'Biglietto Standard';
-  }
-
-
-  document.querySelector('.saluto').innerHTML = traveler;
-
-  document.querySelector('.costo').innerHTML ='€'
-  + price.toFixed(2);
-
-
-  document.querySelector('.wagon').innerHTML = wagon;
-
-  document.querySelector('.cp').innerHTML = cp;
+  if(!isNaN(name.value)){
+    
+   }else {
+     displayBlock.classList.remove('d-none');
+     const traveler = name.value;
+     const distance = km.value;
+     const discountOpz = age.value;
+     let price = distance * priceForKm;
+     const wagon = (Math.floor(Math.random()*9)+1);
+     const cp = Math.floor(Math.random()* (maxCp - minCp +1) + minCp);
+   
+     if(discountOpz === 'Minorenne'){
+       price *= 1 - (underDiscount / 100);
+       document.querySelector('.discount').innerHTML = 'Sconto ' + discountOpz;
+     }else if (discountOpz === 'Over65'){
+       price *= 1 - (overDiscount / 100);
+       document.querySelector('.discount').innerHTML = 'Sconto ' + discountOpz;
+     }else{
+       document.querySelector('.discount').innerHTML = 'Biglietto Standard';
+     }
+   
+   
+     document.querySelector('.saluto').innerHTML = traveler;
+   
+     document.querySelector('.costo').innerHTML ='€'
+     + price.toFixed(2);
+   
+   
+     document.querySelector('.wagon').innerHTML = wagon;
+   
+     document.querySelector('.cp').innerHTML = cp; 
+   }
 });
+
 
 
 btnCancel.addEventListener('click',function(){
