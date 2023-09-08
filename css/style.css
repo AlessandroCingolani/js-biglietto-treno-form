@@ -6,3 +6,7 @@ body  {
 label {
   color: brown;
 }
+
+#traveler {
+  background-color: gray;
+}
