@@ -22,10 +22,15 @@ btnGener.addEventListener('click',function(){
   const traveler = name.value;
   const distance = km.value;
   const discountOpz = age.value;
-  const price = distance * priceForKm;
+  let price = distance * priceForKm;
   const wagon = (Math.floor(Math.random()*9)+1);
   const cp = Math.floor(Math.random()* (maxCp - minCp +1) + minCp);
 
+  if(discountOpz === 'Minorenne'){
+    price *= 1 - (underDiscount / 100);
+  }else if (discountOpz === 'Over65'){
+    price *= 1 - (overDiscount / 100);
+  }
 
 
   document.querySelector('.saluto').innerHTML = traveler;
