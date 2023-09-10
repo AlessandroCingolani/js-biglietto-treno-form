@@ -10,3 +10,7 @@ label {
 #traveler {
   background-color: gray;
 }
+
+.errorMessage {
+  color: red;
+}

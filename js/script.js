@@ -20,6 +20,8 @@ const age = document.getElementById('age');
 const btnGener = document.getElementById('btn-gener');
 const btnCancel = document.getElementById('cancel');
 const displayBlock = document.querySelector('.generated-block');
+const errorMessage = document.querySelector('.errorMessage');
+
 
 
 
@@ -27,8 +29,10 @@ const displayBlock = document.querySelector('.generated-block');
 btnGener.addEventListener('click',function(){
 
   if(!isNaN(name.value)){
+    errorMessage.classList.remove('d-none');
     console.log('Error put string value!');
    }else {
+     errorMessage.classList.add('d-none');
      displayBlock.classList.remove('d-none');
      const traveler = name.value;
      const distance = km.value;
@@ -67,4 +71,5 @@ btnCancel.addEventListener('click',function(){
   km.value ='';
   name.value ='';
   age.value ='Minorenne';
+  errorMessage.classList.add('d-none');
 });
